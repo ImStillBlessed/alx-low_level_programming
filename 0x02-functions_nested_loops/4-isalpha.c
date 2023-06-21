@@ -1,6 +1,8 @@
 #include "main.h"
 /**
  * _isalpha - checks if *c is alpha
+ *
+ * @c: value to be checked
  * Return: 0.
  */
 int _isalpha(int c)

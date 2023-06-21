@@ -1,6 +1,9 @@
 #include "main.h"
 /**
  * print_sign - prints sign of character *n
+ *
+ * @n: value to be processed
+ *
  * Return: 0.
  */
 int print_sign(int n)
