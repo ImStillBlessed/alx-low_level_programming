@@ -4,10 +4,8 @@
  * @j: parameter to be checked
  * Return: 0.
  */
-int _abs(int)
+int _abs(int j)
 {
-	int j;
-
 	if (j < 0)
 		j = j * -1;
 	return (j);
