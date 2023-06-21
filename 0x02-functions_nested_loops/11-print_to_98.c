@@ -23,6 +23,7 @@ void print_to_98(int n)
 				_putchar('0' + n);
 				_putchar(',');
 				_putchar(' ');
+			}
 		}
 		while ( n > 98 )
 		{
@@ -41,7 +42,12 @@ void print_to_98(int n)
 				_putchar('0' + 9);
 			}
 		}
+		_putchar('9');
+		_putchar('8');
 	}
-	_putchar('9');
-	_putchar('8');
+	else
+	{
+		_putchar('9');
+		_putchar('8');
+	}
 }
