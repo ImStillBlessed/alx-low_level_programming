@@ -3,7 +3,7 @@
  * add - add values together
  * @a: first number
  * @b: second number
- * return: 0.
+ * Return: 0.
  */
 int add(int a, int b)
 {
