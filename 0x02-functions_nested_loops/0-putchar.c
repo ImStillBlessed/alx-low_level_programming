@@ -1,9 +1,9 @@
 #include <stdio.h>
 /**
  * main - Prints character *c
- * Return: Always 0 
+ * Return: Always 0 (Success)
  */
-int main (void)
+int main(void)
 {
 	putchar('_');
 	putchar('p');
