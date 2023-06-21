@@ -9,26 +9,27 @@ void print_times_table(int n)
 {
 	int col, row, num;
 
-	if (n > 15 || n < 0)
-		return (0);
-	for (col = 0 ; col <= n ; col++)
+	if (n < 15 && n > 0)
 	{
-		for (row = 0 ; row <= n ; row++)
+		for (col = 0 ; col <= n ; col++)
 		{
-			num = row * col;
-			if (num < 100)
+			for (row = 0 ; row <= n ; row++)
 			{
-				if (10 < num)
+				num = row * col;
+				if (num < 100)
 				{
-					if (num > 0)
-						printf(",   %d", num);
-					printf("%d", num);
+					if (10 < num)
+					{
+						if (num > 0)
+							printf(",   %d", num);
+						printf("%d", num);
+					}
+					else
+						printf(",  %d", num);
 				}
 				else
-					printf(",  %d", num);
+					printf(", %d", num);
 			}
-			else
-				printf(", %d", num);
 		}
 	}
 }
