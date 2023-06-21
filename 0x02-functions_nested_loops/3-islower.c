@@ -2,7 +2,7 @@
 /**
  * _islower - checks if *c is lowercase
  * Parameters:
- * c: the value to be processed
+ * 	c: the value to be processed
  * Return: 0.
  */
 int _islower(int c)
