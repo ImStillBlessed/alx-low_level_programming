@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _isalpha - checks if *c is alohabetic
+ * _isalpha - checks if character *c is alphabetic
  * Return: 0.
  */
 int _isalpha(int c)
