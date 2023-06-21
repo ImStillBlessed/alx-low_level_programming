@@ -13,7 +13,7 @@ void jack_bauer(void)
 		{
 			if (th == 2 && h == 4)
 				break;
-			for (tm = 0 ; tm <= 6 ; tm++)
+			for (tm = 0 ; tm < 6 ; tm++)
 			{
 				for (m = 0 ; m <= 9 ; m++)
 				{
