@@ -18,7 +18,7 @@ void print_times_table(int n)
 				num = row * col;
 				if (num < 100)
 				{
-					if (10 < num)
+					if (num > 10)
 					{
 						if (num > 0)
 							printf(",   %d", num);
