@@ -6,29 +6,31 @@
 
 int main(void)
 {
-	int a;
+	int a = 1;
 
-	a = 2;
-	printf("1");
 	while (a <= 100)
 	{
-		if (a % 3 == 0)
+		if (a % 3 == 0 && a % 5 == 0)
 		{
-			printf(" Fizz");
+			printf("FizzBuzz");
 		}
 		else if (a % 5 == 0)
 		{
-			printf(" Buzz");
+			printf("Buzz");
 		}
-		else if ( a % 3 == 0 && a % 5 == 0)
+		else if (a % 3 == 0)
 		{
-			printf(" FizzBuzz");
+			printf("Fizz");
 		}
 		else
 		{
-			printf(" %d", a);
+			printf("%a", a);
 		}
+
+		if (a != 100)
+			putchar(' ');
 		a++;
 	}
 	printf('\n');
+	return (0);
 }
