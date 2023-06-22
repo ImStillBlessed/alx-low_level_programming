@@ -5,10 +5,15 @@
  * @c: digit
  * Return: 0.
  */
-int _isdigit(char c)
+int _isdigit(int c)
 {
+
 	if (c >= 48 && c <= 97)
+	{
 		return (1);
+	}
 	else
-		rerturn (0);
+	{
+		return (0);
+	}
 }
