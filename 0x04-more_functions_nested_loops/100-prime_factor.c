@@ -26,5 +26,5 @@ int main(void)
 	}
 	if (num > 2)
 		largest = num;
-	printf("%d\n", largest);
+	printf("%lld\n", largest);
 }
