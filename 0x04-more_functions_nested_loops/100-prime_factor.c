@@ -7,7 +7,7 @@
 int main(void)
 {
 	int largest = 0;
-	int num = 612852475143;
+	long long num = 612852475143;
 	int i;
 
 	while (num % 2 == 0)
@@ -21,7 +21,7 @@ int main(void)
 		while (num % i == 0)
 		{
 			largest = i;
-			num = num / 2;
+			num = num / i;
 		}
 	}
 	if (num > 2)
