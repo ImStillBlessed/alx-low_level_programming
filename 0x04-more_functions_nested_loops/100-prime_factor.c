@@ -6,8 +6,8 @@
  */
 int main(void)
 {
-	int largest = 0;
-	long long num = 612852475143;
+	long int largest = 0;
+	long int num = 612852475143;
 	int i;
 
 	while (num % 2 == 0)
@@ -26,6 +26,7 @@ int main(void)
 	}
 	if (num > 2)
 		largest = num;
-	printf("%lld", largest);
+	printf("%ld", largest);
 	printf("\n");
+	return (0);
 }
