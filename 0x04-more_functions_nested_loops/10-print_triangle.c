@@ -7,26 +7,34 @@
  */
 void print_triangle(int size)
 {
-	if (size <= 0)
-	{
-	_putchar('\n');
-	}
+	int a, b, c;
 
-	else
+	if (size > 0)
 	{
-		for (int row = 1 ; row <= size ; row++)
+		a = 0;
+		c = size;
+		while (a <= size)
 		{
-			for (int space = size - row ; space > 0 ; space--)
+			b = 0;
+			while (b <= size)
 			{
-				_putchar(' ');
+				if (b >= c)
+				{
+					_putchar('#');
+				}
+				else
+				{
+					_putchar(' ');
+				}
+				b++;
 			}
-
-			for (int hash = 1 ; hash <= row ; hash++)
-			{
-				_putchar('#');
-			}
-
+			a++;
+			c--;
 			_putchar('\n');
 		}
+	}
+	else
+	{
+		_putchar('\n');
 	}
 }
