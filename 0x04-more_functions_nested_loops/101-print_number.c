@@ -7,24 +7,22 @@
  */
 void print_number(int n)
 {
+	int a, b, c;
 
 	if (n < 0)
 	{
 		n = -n;
 		_putchar('-');
 	}
-	if (n < 1000)
+
+	b = n;
+	for (a = 10 ; b > 9 ; a *= 10)
 	{
-		_putchar('0' + n / 100);
-		n = n % 100;
+		b = b / a;
 	}
-	if (n < 100)
+	while (a >= 10)
 	{
-		_putchar('0' + n / 10);
-		n = n % 10;
-	}
-	if (n < 10)
-	{
-		_putchar('0' + n);
+		_putchar('0' + n % a);
+		a = a / 10;
 	}
 }
