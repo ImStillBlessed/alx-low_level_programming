@@ -30,7 +30,7 @@ void print_triangle(int size)
 			}
 			a++;
 			c--;
-			_putchat('\n');
+			_putchar('\n');
 		}
 	}
 	else
