@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include "main.h"
+
 /**
  * main - Entry point
  * Return: 0.
@@ -24,11 +26,11 @@ int main(void)
 		}
 		else
 		{
-			printf("%a", a);
+			printf("%d", a);
 		}
 
 		if (a != 100)
-			putchar(' ');
+			_putchar(' ');
 		a++;
 	}
 	printf('\n');
