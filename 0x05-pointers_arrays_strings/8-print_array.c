@@ -11,7 +11,7 @@ void print_array(int *a, int n)
 
   while (i <= n)
     {
-      puts(a[i]);
+      print_number(a[i]);
       if (i != n)
       {
         _putchar(',');
