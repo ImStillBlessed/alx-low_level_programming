@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * puts-half - Prints second half of a string.
+ * puts_half - Prints second half of a string.
  * @str: string input
  * Return: void.
  */
