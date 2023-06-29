@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _strcpy - copies strings
+ * _strncpy - copies strings
  * @src: first
  * @dest: second
  * @n: number of characters
@@ -13,9 +13,9 @@ char *_strncpy(char *dest, char *src, int n)
     while (src[i] != '\0')
         i++;
     
-    while (a <= n)
+    while (a < n)
     {
-        if (a <= i)
+        if (a < i)
         {
             dest[a] = src[a];
             a++;
