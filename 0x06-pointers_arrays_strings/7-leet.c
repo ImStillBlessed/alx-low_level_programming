@@ -23,4 +23,5 @@ char *leet(char *str)
         }
         a++;
     }
+    return str;
 }
