@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
 * _strcat - concats a string
 * @dest - second string
@@ -7,9 +8,10 @@
 */
 char *_strcat(char *dest, char *src)
 {
-  char temp = src;
-  
-  while (dest++)
-	temp = temp + *dest;
+  char *temp;
+
+  while (src++)
+    temp = temp + *src;
+
   return (temp);
 }
