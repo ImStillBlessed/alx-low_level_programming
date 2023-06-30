@@ -19,7 +19,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	while (i >= 0 || j >= 0 || carry > 0)
 	{
 		int digit1 = (i >= 0) ? n1[i--] - '0' : 0;
-		int digit2 = (j >= 0) ? n2[i--] - '0' : 0;
+		int digit2 = (j >= 0) ? n2[j--] - '0' : 0;
 		int sum = digit1 + digit2 + carry;
 
 		carry = sum / 10;
