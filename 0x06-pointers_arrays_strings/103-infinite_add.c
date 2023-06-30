@@ -1,5 +1,3 @@
-#include <stdio.h>
-#include <string.h>
 #include "main.h"
 
 /**
@@ -12,33 +10,37 @@
  */
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	int carry = 0;
-	int i = strlen(n1) - 1;
-	int j = strlen(n2) - 1;
-	int k = 0;
+	int i, j, k, l, m, n;
 
-	while (i >= 0 || j >= 0 || carry > 0)
+	for (i = 0; n1[i]; i++)
+		;
+	for (j = 0; n2[j]; j++)
+		;
+	if (i > size_r || j > size_r)
+		return (0);
+	m = 0;
+	for (i -= 1, j -= 1, k = 0; k < size_r - 1; i--, j--, k++)
 	{
-		int digit1 = (i >= 0) ? n1[i--] - '0' : 0;
-		int digit2 = (j >= 0) ? n2[j--] - '0' : 0;
-		int sum = digit1 + digit2 + carry;
-
-		carry = sum / 10;
-		r[k++] = sum % 10 + '0';
+		n = m;
+		if (i >= 0)
+			n += n1[i] - '0';
+		if (j >= 0)
+			n += n2[j] - '0';
+		if (i < 0 && j < 0 && n == 0)
+		{
+			break;
+		}
+		m = n / 10;
+		r[k] = n % 10 + '0';
 	}
-
-	if (k >= size_r)
-		return 0;
-
 	r[k] = '\0';
-
-	for (int left = 0, right =k - 1 ; left < right ; left++, right--)
+	if (i >= 0 || j >= 0 || m)
+		return (0);
+	for (k -= 1, l = 0; l < k; k--, l++)
 	{
-		char temp = r[left];
-
-		r[left] = r[right];
-		r[right] = temp;
+		m = r[k];
+		r[k] = r[l];
+		r[l] = m;
 	}
-
-	return r;
+	return (r);
 }
