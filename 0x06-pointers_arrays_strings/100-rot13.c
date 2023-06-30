@@ -17,6 +17,7 @@ char *rot13(char *str)
         if (is_upper || is_lower)
         {
             char *alpha_ptr = alpha + ((*ptr & 31) - 1 + (is_lower * 26));
+
             *ptr = *alpha_ptr;
         }
         ptr++;
