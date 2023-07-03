@@ -8,23 +8,21 @@
 */
 char *_strchr(char *s, char c)
 {
-	int i = 0;
+	char *temp - NULL;
 	int k = 0;
-	char *temp = s;
 
 	while (*s != '\0')
 	{
 		if (*s == c)
-			k++;
-		if (k > 0)
 		{
-			temp[i] = *s;
-			i++;
+			temp = s;
+			k = 1;
+			break;
 		}
 		s++;
 	}
-	if (k == 0)
+	if (k)
+		return temp;
+	else
 		return NULL;
-	temp[i] = '\0';
-	return temp;
 }
