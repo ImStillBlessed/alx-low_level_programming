@@ -6,3 +6,7 @@
 * @accept: values tk compare @s
 * Return: the position... I think. 
 */
+char *_strpbrk(char *s, char *accept)
+{
+  
+}
