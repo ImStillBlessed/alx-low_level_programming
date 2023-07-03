@@ -1,4 +1,5 @@
-#include "main.h" 
+#include "main.h"
+#include <stdlib.h>
 /**
 * _strpbrk - returns the number where the first occurance 
 * of a value from @s2 in @s1
@@ -8,21 +9,20 @@
 */
 char *_strpbrk(char *s, char *accept)
 {
-	char *temp = NULL;
 	int k = 0;
 
 	while (*s != '\0')
 	{
-		if (*s == c)
+		while (*accept != '\0')
 		{
-			temp = s;
-			k = 1;
-			break;
+			if (*s == accept)
+			{
+				return k + 1;
+			}
 		}
 		s++;
+		k++;
 	}
-	if (k)
-		return temp;
-	else
+	if (k == 0)
 		return NULL;
 }
