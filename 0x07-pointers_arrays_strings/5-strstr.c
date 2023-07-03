@@ -1,4 +1,5 @@
-#include "main.h" 
+#include "main.h"
+#include <stdlib.h>
 /**
 * _strstr - finds a word in a string returns rest of string
 * @haystack: string to search
@@ -11,6 +12,8 @@ char *_strstr(char *haystack, char *needle)
   int reset;
   char *resetneed = needle;
 
+  if (*needle == '\0')
+    return NULL;
   while (*needle != '\0')
   {
     k++;
