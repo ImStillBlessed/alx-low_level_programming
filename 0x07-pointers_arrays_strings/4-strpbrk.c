@@ -8,5 +8,21 @@
 */
 char *_strpbrk(char *s, char *accept)
 {
-  
+	char *temp = NULL;
+	int k = 0;
+
+	while (*s != '\0')
+	{
+		if (*s == c)
+		{
+			temp = s;
+			k = 1;
+			break;
+		}
+		s++;
+	}
+	if (k)
+		return temp;
+	else
+		return NULL;
 }
