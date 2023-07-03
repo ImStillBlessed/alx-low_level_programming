@@ -6,3 +6,20 @@
 * @s2: second string of values to check
 * Return: the bytes of value when unknown found
 */
+unsigned int _strspn(char *s, char *accept)
+{
+  for (int i = 1 ; s ; s++)
+  {
+		while (accept)
+      {
+        if (accept != s) 
+          return i;
+        else
+        {
+          i++;
+          accept++
+        }
+      } 
+  } 
+
+}
