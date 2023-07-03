@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdlib.h>
 /**
 * _strchr - checks for string occurance and prints what's left
 * @s: string to check
