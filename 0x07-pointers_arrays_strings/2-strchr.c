@@ -11,9 +11,9 @@ char *_strchr(char *s, char c)
 	int k = 0;
 	char *temp = s;
 
-	while (s != '\0')
+	while (*s != '\0')
 	{
-		if (s[i] == c || k > 0)
+		if (*s == c || k > 0)
 		{
 			k++;
 			temp[i] = s[i];
