@@ -18,6 +18,7 @@ int check (char *s, int i, int k)
 	if (s[i] == s[k])
 		return (check(s, i + 1, k - 1));
 	return (0);
+}
 /**
  * is_palindrome - checks if a string is a palindrome
  * @s: the string to check
