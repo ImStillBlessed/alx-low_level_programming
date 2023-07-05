@@ -26,10 +26,10 @@ int check (char *s, int i, int k)
  */
 int is_palindrome(char *s)
 {
-	if (*s == '\0')
-		return (1);
 	int i = 0;
 	int k = strlen(s);
 
-	return (check(s, i, k));
+	if (*s == '\0')
+		return (1);
+	return (check(s, i, k - 1));
 }
