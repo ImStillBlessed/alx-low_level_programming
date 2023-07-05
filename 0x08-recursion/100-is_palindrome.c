@@ -2,7 +2,7 @@
 #include <string.h>
 
 int is_palindrome(char *s);
-int check (char *s, int i, int k);
+int check(char *s, int i, int k);
 
 /**
  * check - checks if a string is palindromic one by one by recursion
@@ -11,7 +11,7 @@ int check (char *s, int i, int k);
  * @k: integer representing the second half of the string
  * Return: 1 if palindromic 0 if not.
  */
-int check (char *s, int i, int k)
+int check(char *s, int i, int k)
 {
 	if (k <= i)
 		return (1);
