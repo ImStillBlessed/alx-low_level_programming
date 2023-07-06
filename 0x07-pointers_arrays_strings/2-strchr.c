@@ -11,8 +11,6 @@ char *_strchr(char *s, char c)
 	char *temp = NULL;
 	int k = 0;
 
-	if (c == '\0')
-		return (' ');
 	while (*s != '\0')
 	{
 		if (*s == c)
