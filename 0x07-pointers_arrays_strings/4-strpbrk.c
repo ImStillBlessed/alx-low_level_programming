@@ -1,11 +1,11 @@
 #include "main.h"
 #include <stdlib.h>
 /**
-* _strpbrk - returns the number where the first occurance 
+* _strpbrk - returns the number where the first occurance
 * of a value from @s2 in @s1
-* @s: string to check 
+* @s: string to check
 * @accept: values tk compare @s
-* Return: the position... I think. 
+* Return: the position... I think.
 */
 char *_strpbrk(char *s, char *accept)
 {
@@ -17,7 +17,7 @@ char *_strpbrk(char *s, char *accept)
 		{
 			if (*s == *accept)
 			{
-				return s;
+				return (s);
 			}
 			accept++;
 		}
@@ -25,5 +25,5 @@ char *_strpbrk(char *s, char *accept)
 		k++;
 		accept -= k;
 	}
-	return NULL;
+	return (NULL);
 }
