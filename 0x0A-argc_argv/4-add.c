@@ -10,17 +10,16 @@ int main(int argc, char *argv)
 	int sum = 0;
 	int i;
 
-	if (argc < 2)
-		prinf("%d", 0);
-	else
+	if (argc > 1)
 		for (i = 1; i < argc; i++)
 		{
-			if (!(argv[i] < 58 && argv[i] > 47))
+			if (!isdigit(argv[i]))
 			{
 				printf("ERROR\n");
 				return (1);
 			}
 			sum += argv[i];
-			printf("%d\n", sum);
 		}
+	printf("%d\n", sum);
+	return (0);
 } 
