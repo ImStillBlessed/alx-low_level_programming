@@ -3,7 +3,7 @@
 * main - Entry point
 * @argc: number of arguments
 * @argv: arguments
-* Return: void.
+* Return: 0.
 */
 int main(int argc, char __attribute__((__unused__)) *argv[])
 {
