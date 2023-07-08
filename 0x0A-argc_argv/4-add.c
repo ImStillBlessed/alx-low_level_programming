@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
 				{
 					if (!isdigit(argv[i][j]))
 					{
-						printf("ERROR\n");
+						printf("Error\n");
 						return (1);
 					}
 				}
@@ -27,4 +27,4 @@ int main(int argc, char *argv[])
 		}
 	printf("%d\n", sum);
 	return (0);
-} 
+}
