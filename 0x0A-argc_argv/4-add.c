@@ -15,7 +15,7 @@ int main(int argc, char *argv)
 	else
 		for (i = 1; i < argc; i++)
 		{
-			if (!(argv[i] < 65 && argv[i] > 15))
+			if (!(argv[i] < 58 && argv[i] > 47))
 			{
 				printf("ERROR\n");
 				return (1);
