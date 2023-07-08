@@ -5,8 +5,8 @@
 * @argv: array of arguments
 * Return: void.
 */
-void main(int argc, char *argv[])
+int main(int __unused ((unused))__ argc, char *argv[])
 {
-  printf(argv[0]);
+  printf("%s\n", argv[0]);
   return (0);
 }
