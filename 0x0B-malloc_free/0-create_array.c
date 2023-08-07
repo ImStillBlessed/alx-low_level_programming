@@ -3,7 +3,7 @@
 #include "main.h"
 
 /**
- * create_array - creates an array and makes the first val. a specified characte
+ * create_array - creates and returns a modified array
  * @size: the size of the array
  * @c: initializing character
  * Return: 0 incase of error 1.
