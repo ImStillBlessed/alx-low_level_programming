@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "main.h"
+#include <string.h>
 
 /**
  * _strdup - duplicates and stores a given string
@@ -14,7 +15,7 @@ char *_strdup(char *str)
 
 	if (str == NULL)
 		return (NULL);
-	str_size = strlen(*str);
+	str_size = strlen(str);
 	i = 0;
 	new_str_mem = malloc(sizeof(char) * str_size + 1);
 	while (i <= str_size + 1)
