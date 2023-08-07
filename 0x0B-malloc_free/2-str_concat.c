@@ -14,13 +14,20 @@ char *str_concat(char *s1, char *s2)
 	int one, two, total;
 	int i = 0;
 	char *n_str;
-	int j;
+	int j = 0;
 
 	if (s1 == NULL && s2 == NULL)
 		return (NULL);
-	one = strlen(s1);
-	two = strlen(s2);
-	total = one + two + 1;
+	if (s1 == "")
+		one = 0;
+	else if (s2 == "")
+		two = 0;
+	else
+	{
+		one = strlen(s1);
+		two = strlen(s2);
+		total = one + two + 1;
+	}
 
 	n_str = malloc(sizeof(char) * total);
 	while (i <= one)
@@ -30,11 +37,11 @@ char *str_concat(char *s1, char *s2)
 		n_str[i] = s1[i];
 		i++;
 	}
-	for (j = 0; j <= two; j++)
+	while (j <= two)
 	{
 		n_str[i] = s2[j];
 		i++;
+		j++
 	}
 	return (n_str);
 }
-
