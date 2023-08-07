@@ -19,15 +19,18 @@ char *str_concat(char *s1, char *s2)
 	if (s1 == NULL && s2 == NULL)
 		return (NULL);
 	if (s1 == NULL)
+	{
 		one = 0;
+		two = strlen(s2);
 	else if (s2 == NULL)
+		one = strlen(s1);
 		two = 0;
 	else
 	{
 		one = strlen(s1);
 		two = strlen(s2);
-		total = one + two + 1;
 	}
+	total = one + two + 1;
 
 	n_str = malloc(sizeof(char) * total);
 	while (i <= one)
