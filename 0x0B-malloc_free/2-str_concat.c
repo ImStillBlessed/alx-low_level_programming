@@ -18,9 +18,9 @@ char *str_concat(char *s1, char *s2)
 
 	if (s1 == NULL && s2 == NULL)
 		return (NULL);
-	if (s1 == "")
+	if (s1 == NULL)
 		one = 0;
-	else if (s2 == "")
+	else if (s2 == NULL)
 		two = 0;
 	else
 	{
@@ -41,7 +41,7 @@ char *str_concat(char *s1, char *s2)
 	{
 		n_str[i] = s2[j];
 		i++;
-		j++
+		j++;
 	}
 	return (n_str);
 }
