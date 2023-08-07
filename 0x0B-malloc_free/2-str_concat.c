@@ -22,9 +22,12 @@ char *str_concat(char *s1, char *s2)
 	{
 		one = 0;
 		two = strlen(s2);
+	}
 	else if (s2 == NULL)
+	{
 		one = strlen(s1);
 		two = 0;
+	}
 	else
 	{
 		one = strlen(s1);
