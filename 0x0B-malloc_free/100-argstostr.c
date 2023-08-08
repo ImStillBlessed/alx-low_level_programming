@@ -19,4 +19,5 @@ char *argstostr(int ac, char **av)
 	{
 		printf("%s\n", av[i]);
 	}
+	return (0);
 }
