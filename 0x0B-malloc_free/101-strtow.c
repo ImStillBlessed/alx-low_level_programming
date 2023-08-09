@@ -24,13 +24,13 @@ int count(char *string)
 {
 	int i = 0;
 
-	while (string != '\0')
+	while (*string != '\0')
 	{
 		if (string[i] != " ")
 			return (i);
 		i++;
 	}
-	return (NULL);
+	return (i);
 }
 
 /**
