@@ -7,13 +7,15 @@ int count(char *string);
 int lenght(char *strng, int position);
 char **strtow(char *str);
 
-//count the string...
-//when the first word is foun
-//find lenght to allocate mem.
-//iterate through and store in new str1.
-//add a null termunator.
-//one step forward (to skio the space)
-//iterate till the end into a new str2
+/**
+* count the string...
+* when the first word is foun
+* find lenght to allocate mem.
+* iterate through and store in new str1.
+* add a null termunator.
+* one step forward (to skio the space)
+* iterate till the end into a new str2
+*/
 
 /**
  * count - counts the num of spaces to string
@@ -69,9 +71,9 @@ char **strtow(char *str)
 
 	if (str == NULL)
 		return (NULL);
-	//count function//
+	//count function
 	pos1 = count(str);
-	//count lenght//
+	//count lenght
 	lenght1 = lenght(str, pos1);
 	//allocate mem
 	new_str1 = malloc(sizeof(char) * lenght1 + 1);
