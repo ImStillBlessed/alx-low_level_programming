@@ -5,7 +5,7 @@
 
 int count(char *string);
 int lenght(char *strng, int position);
-int **strtow(char *str);
+char **strtow(char *str);
 
 //count the string...
 //when the first word is foun
