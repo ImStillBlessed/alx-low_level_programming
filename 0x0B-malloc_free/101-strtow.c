@@ -26,7 +26,7 @@ int count(char *string)
 
 	while (*string != '\0')
 	{
-		if (string[i] != " ")
+		if (string[i] != ' ')
 			return (i);
 		i++;
 	}
@@ -45,10 +45,10 @@ int lenght(char *strng, int position)
 
 	while (strng[position] != '\0')
 	{
-		if (strng[position] == " ")
+		if (strng[position] == ' ')
 			return (i);
 		position++;
-		i++
+		i++;
 	}
 	return (i);
 }
@@ -77,7 +77,6 @@ char **strtow(char *str)
 	new_str1 = malloc(sizeof(char) * lenght1 + 1);
 	if (new_str1 == NULL)
 	{
-		free(new_str1);
 		return (NULL);
 	}
 	while (i < lenght1)
@@ -95,7 +94,6 @@ char **strtow(char *str)
 	new_str2 = malloc(sizeof(char) * lenght2 + 1);
 	if (new_str2 == NULL)
 	{
-		free(new_str2);
 		return (NULL);
 	}
 	while (str[pos1] != '\0')
@@ -106,14 +104,15 @@ char **strtow(char *str)
 	}
 	new_str2[i] = '\0';
 	//add a return string
-	returner = malloc(sizeof(char *) * 3);
+	returner = malloc(sizeof(char *));
 	if (returner == NULL)
 	{
-		free(returner);
 		return (NULL);
 	}
 	returner[0] = new_str1;
 	returner[1] = new_str2;
+	free(new_str1);
+	free(new_str2);
 	//return
 	return (returner);
 }
