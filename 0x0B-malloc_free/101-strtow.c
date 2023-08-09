@@ -104,15 +104,15 @@ char **strtow(char *str)
 	}
 	new_str2[i] = '\0';
 	//add a return string
-	returner = malloc(sizeof(char *));
+	returner = malloc(sizeof(char *) * 2);
 	if (returner == NULL)
 	{
+		free(new_str1);
+		free(new_str2);
 		return (NULL);
 	}
 	returner[0] = new_str1;
 	returner[1] = new_str2;
-	free(new_str1);
-	free(new_str2);
 	//return
 	return (returner);
 }
