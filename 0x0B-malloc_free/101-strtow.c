@@ -71,11 +71,11 @@ char **strtow(char *str)
 
 	if (str == NULL)
 		return (NULL);
-	//count function
+/* count function */
 	pos1 = count(str);
-	//count lenght
+/* count length */
 	lenght1 = lenght(str, pos1);
-	//allocate mem
+/* allocate mem */
 	new_str1 = malloc(sizeof(char) * lenght1 + 1);
 	if (new_str1 == NULL)
 	{
@@ -90,9 +90,9 @@ char **strtow(char *str)
 	new_str1[i] = '\0';
 	pos1++;
 	i = 0;
-	//count lengh
+/* count length */
 	lenght2 = lenght(str, pos1);
-	//allocate mem
+/* allocate mem */
 	new_str2 = malloc(sizeof(char) * lenght2 + 1);
 	if (new_str2 == NULL)
 	{
@@ -105,7 +105,7 @@ char **strtow(char *str)
 		pos1++;
 	}
 	new_str2[i] = '\0';
-	//add a return string
+/* add a return string */
 	returner = malloc(sizeof(char *) * 2);
 	if (returner == NULL)
 	{
@@ -115,6 +115,6 @@ char **strtow(char *str)
 	}
 	returner[0] = new_str1;
 	returner[1] = new_str2;
-	//return
+/* return */
 	return (returner);
 }
