@@ -4,7 +4,7 @@
 #include "main.h"
 
 /**
- * _calloc - mimicing calloc(), will allocate memory and set to 0.
+ * _calloc - will allocate memory and set elements to 0.
  * @nmemb: number of elements in the array
  * @size: size in bytes of elements.
  * Return: pointer to the new array, NULL if fail.
