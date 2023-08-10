@@ -11,17 +11,13 @@
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	unsigned int i;
-	char *array;
+	void *array;
 
 	if (nmemb == 0 || size == 0)
 		return (NULL);
-	array = (char *)malloc(nmemb * size);
+	array = malloc(nmemb * size);
 	if (array == NULL)
 		return (NULL);
-	for (i = 0; i < size / sizeof(char); i++)
-	{
-		array[i] = 0;
-	}
+	memset(array, 0, nmemb * size);
 	return (array);
 }
