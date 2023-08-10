@@ -7,13 +7,15 @@ int count(char *string);
 int lenght(char *strng, int position);
 char **strtow(char *str);
 
-//count the string...
-//when the first word is foun
-//find lenght to allocate mem.
-//iterate through and store in new str1.
-//add a null termunator.
-//one step forward (to skio the space)
-//iterate till the end into a new str2
+/**
+* count the string...
+* when the first word is foun
+* find lenght to allocate mem.
+* iterate through and store in new str1.
+* add a null termunator.
+* one step forward (to skio the space)
+* iterate till the end into a new str2
+*/
 
 /**
  * count - counts the num of spaces to string
@@ -26,7 +28,7 @@ int count(char *string)
 
 	while (*string != '\0')
 	{
-		if (string[i] != " ")
+		if (string[i] != ' ')
 			return (i);
 		i++;
 	}
@@ -45,10 +47,10 @@ int lenght(char *strng, int position)
 
 	while (strng[position] != '\0')
 	{
-		if (strng[position] == " ")
+		if (strng[position] == ' ')
 			return (i);
 		position++;
-		i++
+		i++;
 	}
 	return (i);
 }
@@ -69,15 +71,14 @@ char **strtow(char *str)
 
 	if (str == NULL)
 		return (NULL);
-	//count function//
+/* count function */
 	pos1 = count(str);
-	//count lenght//
+/* count length */
 	lenght1 = lenght(str, pos1);
-	//allocate mem
+/* allocate mem */
 	new_str1 = malloc(sizeof(char) * lenght1 + 1);
 	if (new_str1 == NULL)
 	{
-		free(new_str1);
 		return (NULL);
 	}
 	while (i < lenght1)
@@ -89,13 +90,12 @@ char **strtow(char *str)
 	new_str1[i] = '\0';
 	pos1++;
 	i = 0;
-	//count lengh
+/* count length */
 	lenght2 = lenght(str, pos1);
-	//allocate mem
+/* allocate mem */
 	new_str2 = malloc(sizeof(char) * lenght2 + 1);
 	if (new_str2 == NULL)
 	{
-		free(new_str2);
 		return (NULL);
 	}
 	while (str[pos1] != '\0')
@@ -105,15 +105,16 @@ char **strtow(char *str)
 		pos1++;
 	}
 	new_str2[i] = '\0';
-	//add a return string
-	returner = malloc(sizeof(char *) * 3);
+/* add a return string */
+	returner = malloc(sizeof(char *) * 2);
 	if (returner == NULL)
 	{
-		free(returner);
+		free(new_str1);
+		free(new_str2);
 		return (NULL);
 	}
 	returner[0] = new_str1;
 	returner[1] = new_str2;
-	//return
+/* return */
 	return (returner);
 }
