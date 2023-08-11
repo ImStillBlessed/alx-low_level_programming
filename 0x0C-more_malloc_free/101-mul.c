@@ -7,55 +7,47 @@
 /**
  * main - Entry point
  * @ac: number of arguments
- * @av: array of argument
- * Return: the product of the two numbers
+ * @av: array of arguments
+ * Return: 0 on success, 98 on error
  */
 int main(int ac, char **av)
 {
 	int ans, first, second, i;
 
-	if (ac > 3)
+	if (ac != 3)
 	{
 		printf("Error\n");
-		exit(98);
+		return (98);
 	}
 
-	if (strlen(av[1]) > 0)
-	{
-		for (i = 0; av[1][i]; i++)
-		{
-			if (!isdigit(av[1][i]))
-			{
-				printf("Error\n");
-				exit(98);
-			}
-		}
-		first = atoi(av[1]);
-	}
-	else
+	if (strlen(av[1]) == 0 || strlen(av[2]) == 0)
 	{
 		printf("Error\n");
-		exit(98);
+		return (98);
 	}
 
-	if (strlen(av[2]) > 0)
+	for (i = 0; av[1][i]; i++)
 	{
-		for (i = 0; av[2][i]; i++)
+		if (!isdigit(av[1][i]))
 		{
-			if (!isdigit(av[2][i]))
-			{
-				printf("Error\n");
-				exit(98);
-			}
+			printf("Error\n");
+			return (98);
 		}
-		second = atoi(av[2]);
 	}
-	else
+	first = atoi(av[1]);
+
+	for (i = 0; av[2][i]; i++)
 	{
-		printf("Error\n");
-		exit(98);
+		if (!isdigit(av[2][i]))
+		{
+			printf("Error\n");
+			return (98);
+		}
 	}
+	second = atoi(av[2]);
+
 	ans = first * second;
 	printf("%d\n", ans);
+
 	return (0);
 }
