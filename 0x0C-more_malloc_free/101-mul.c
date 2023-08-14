@@ -14,10 +14,10 @@ int main(int ac, char **av)
 {
 	int ans, first, second, i;
 
-	if (ac > 3)
+	if (ac != 3)
 	{
 		printf("Error\n");
-		exit(98);
+		return (98);
 	}
 
 	if (strlen(av[1]) > 0)
@@ -53,7 +53,7 @@ int main(int ac, char **av)
 	else
 	{
 		printf("Error\n");
-		exit(98);
+		return (98);
 	}
 	ans = first * second;
 	printf("%d\n", ans);
