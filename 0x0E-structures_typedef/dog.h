@@ -6,7 +6,7 @@
  * Description: houses a dog and its details.
  */
 
-typedef struct
+typedef struct dog
 {
 	char *name;
 	float age;
