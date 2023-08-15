@@ -8,7 +8,8 @@
  * @name: same name
  * @age: float of same age
  * @owner: smae owner as my_dog
- * Description: returns a pointer to new_dog or NULL 
+ * Description: returns a pointer to new_dog or NULL
+ * Return: new_dog or NULL if failed.
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
