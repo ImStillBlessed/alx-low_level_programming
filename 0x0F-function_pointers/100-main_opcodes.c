@@ -10,9 +10,10 @@ void print_opcodes(int num_bytes);
 
 void print_opcodes(int num_bytes)
 {
+	int i;
 	void (*ptr)() = print_opcodes;
 
-	for (int i = 0; i < num_bytes; i++)
+	for (i = 0; i < num_bytes; i++)
 	{
 		unsigned char opcode = *((unsigned char*)ptr + i);
 		printf("%02x", opcode);
