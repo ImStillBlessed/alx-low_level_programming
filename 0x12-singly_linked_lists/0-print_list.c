@@ -10,8 +10,9 @@
  */
 size_t print_list(const list_t *h)
 {
-	const list_t *ptr;
 	size_t count = 0;
+
+	const list_t *ptr;
 
 	if (h == NULL)
 		return (0);
