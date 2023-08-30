@@ -18,23 +18,23 @@ size_t print_listint_safe(const listint_t *head)
 		exit(98);
 	ptr1 = head;
 	ptr2 = head;
-	while (ptr1 == NULL && ptr2 == NULL ptr2->next == NULL)
+	while (ptr1 == NULL || ptr2 == NULL || ptr2->next == NULL)
 	{
 		ptr1 = ptr1->next;
 		ptr2 = ptr2->next->next;
 		if (ptr1 == ptr2)
 		{
-			printf("[%p] %d\n", (void *)ptr, ptr->n);
+			printf("[%p] %d\n", (void *)ptr1, ptr1->n);
 			return (i + 1);
 		}
-		printf("[%p] %d\n", (void *)ptr, ptr->n);
+		printf("[%p] %d\n", (void *)ptr1, ptr1->n);
 		i++;
 	}
 	ptr1 = head;
 	for (i = 0; ptr1 != NULL; i++)
 	{
-		printf("[%p] %d\n", (void *)ptr, ptr->n);
-		ptr = ptr->next;
+		printf("[%p] %d\n", (void *)ptr1, ptr1->n);
+		ptr1 = ptr1->next;
 	}
 	return (i);
 }
