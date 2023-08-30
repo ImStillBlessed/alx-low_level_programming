@@ -3,7 +3,7 @@
 #include "lists.h"
 
 /**
- * free_listint2 - frees a list but sets its first node to 
+ * free_listint2 - frees a list but sets its first node to.
  * @head: pointer to the pointer of the first node
  *
  * Return: nothing.
@@ -15,9 +15,10 @@ void free_listint2(listint_t **head)
 
 	if (*head == NULL)
 	{
-		free(head);
+		free(*head);
 		printf("Freed!");
 		exit(0);
+	}
 	else
 	{
 		ptr = *head;
