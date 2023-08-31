@@ -5,7 +5,6 @@
 /**
  * binary_to_int - converts a binary number to an integer
  * @b: the binarry number
- *
  * Return: pointer to the new number.
  */
 
