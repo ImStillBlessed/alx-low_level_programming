@@ -1,15 +1,20 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "main.h"
 
 void print_binary(unsigned long int n)
 {
+	int* binary;
+	int j, i = 0;
+
 	if (n == 0)
 	{
 		printf("0");
 		return;
 	}
-	int binary[64];
-	int i = 0;
+	binary = malloc(sizeof(int) * 64);
+	if (binary == NULL)
+		return;
 
 	while (n > 0)
 	{
@@ -17,6 +22,7 @@ void print_binary(unsigned long int n)
 		n = n / 2;
 		i++;
 	}
-	for (int j = i - 1; j >= 0; j--)
+	for (j = i - 1; j >= 0; j--)
 		printf("%d", binary[j]);
+	free(binary);
 }
