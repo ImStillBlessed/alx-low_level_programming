@@ -4,25 +4,14 @@
 
 void print_binary(unsigned long int n)
 {
-	int* binary;
-	int j, i = 0;
-
-	if (n == 0)
+	int size = sizeof(unsigned long int) * 8; // Assuming 8 bits per byte
+	int i;
+	unsigned long int mask;
+	
+	for (i = size - 1; i >= 0; i--)
 	{
-		printf("0");
-		return;
+		mask = 1UL << i;
+		int bit = (n & mask) != 0;
+		printf("%d", bit);
 	}
-	binary = malloc(sizeof(int) * 64);
-	if (binary == NULL)
-		return;
-
-	while (n > 0)
-	{
-		binary[i] = n % 2;
-		n = n / 2;
-		i++;
-	}
-	for (j = i - 1; j >= 0; j--)
-		printf("%d", binary[j]);
-	free(binary);
 }
