@@ -4,14 +4,11 @@
 
 void print_binary(unsigned long int n)
 {
-	int size = sizeof(unsigned long int) * 8;
-	int i;
-	unsigned long int mask;
-	
-	for (i = size - 1; i >= 0; i--)
+	if (n == 0 || n == 1)
 	{
-		mask = 1UL << i;
-		int bit = (n & mask) != 0;
-		printf("%d", bit);
+		putchar(n + '0');
+		return;
 	}
+	print_binary(n >> 1);
+	putchar((n & 1) + '0');
 }
