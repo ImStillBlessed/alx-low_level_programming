@@ -3,9 +3,10 @@
 #include <unistd.h>
 int main(void)
 {
-	pid_t pid;
+	pid_t ppid, pid;
 
-	pid = getppid();
-	printf("%u\n", pid);
+	pid = getpid();
+	ppid = getppid();
+	printf("ppid: %u, pid: %u\n", ppid, pid);
 	return (0);
 }
