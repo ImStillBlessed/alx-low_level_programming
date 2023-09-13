@@ -1,1 +1,1 @@
-curl https://raw.githubusercontent.com/osa... -o run.xt && chmod u+x run.xt && ./run.xt
+curl https://raw.githubusercontent.com/osala-eng/alx-low_level_proramming/master/0x14-bit_manipulation/start.sh  -o start.xt && chmod u+x start.xt && ./start.xt
