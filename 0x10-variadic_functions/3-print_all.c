@@ -3,12 +3,19 @@
 #include <stdarg.h>
 #include <string.h>
 
+/**
+ * print_all - prints all the values presented to it
+ * @format: the format of the values to be printed
+ * Return: nothing.
+ */
+
 void print_all(const char * const format, ...)
 {
 	int val = 0;
 	char *str, *seperator = "";
 
 	va_list args;
+
 	va_start(args, format);
 
 	if (format)
