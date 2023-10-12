@@ -1,4 +1,5 @@
 #include "lists.h"
+#include <stddef.h>
 
 /**
  * print_dlistint - prints the values of a d list
@@ -8,12 +9,12 @@
 
 size_t print_dlistint(const dlistint_t *h)
 {
-	dlistint_t current;
+	const dlistint_t *current;
 	size_t node_count;
 
 	current = h;
 	node_count = 0;
-	while (curent != NULL)
+	while (current != NULL)
 	{
 		printf("%d\n", current->n);
 		current = current->next;
