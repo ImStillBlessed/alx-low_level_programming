@@ -1,6 +1,6 @@
 #include "lists.h"
 
-/*
+/**
  * dlistint_len - prints the count of a lists
  * @h: pointer to the head of the node
  * Return: number of nodes
