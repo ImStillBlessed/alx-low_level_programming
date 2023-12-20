@@ -10,7 +10,7 @@ $(NAME): $(OBJ)
 %.o: %.c
 	$(CC) -c -o $@ $<
 
-re: clean all
+re: oclean all
 
 all: $(NAME)
 
