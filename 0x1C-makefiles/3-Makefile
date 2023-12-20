@@ -20,6 +20,4 @@ clean:
 oclean:
 	$(RM) -f $(OBJ)
 
-fclean:
-	$(RM) -f *~ school
-	$(RM) -f $(OBJ)
+fclean: clean oclean
