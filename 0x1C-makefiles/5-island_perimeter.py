@@ -28,6 +28,8 @@ def island_perimeter(grid):
 
 
 def checker(grid, i, j):
+    """
+    this is a helper function to validate the position we want to check"""
     if i < 0 or j < 0:
         return 1
     try:
