@@ -3,5 +3,5 @@ SRC=*.c
 
 all: school
 
-school: school.c main.c
+school:
 	$(CC) $(SRC) -o school
