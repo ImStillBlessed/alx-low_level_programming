@@ -5,7 +5,7 @@ NAME=school
 RM=rm
 
 $(NAME): $(OBJ)
-	$(CC) $^ -o $@
+	$(CC) $(OBJ) -o $(NAME)
 
 %.o: %.c
 	$(CC) -c -o $@ $<
