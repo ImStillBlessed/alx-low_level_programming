@@ -13,28 +13,28 @@ def island_perimeter(grid):
         for j in range(len(grid[i])):
             if grid[i][j] == 1:
                 # check right
-                if checker(grid, i, j + 1):
+                if grid[i][j + 1] != 1:
                     perimeter += 1
                 # check left
-                if checker(grid, i, j - 1):
+                if grid[i][j - 1] != 1:
                     perimeter += 1
                 # check up
-                if checker(grid, i + 1, j):
+                if grid[i - 1][j] != 1:
                     perimeter += 1
                 # check down
-                if checker(grid, i - 1, j):
+                if grid[i + 1][j] != 1:
                     perimeter += 1
     return perimeter
 
 
-def checker(grid, i, j):
-    """
-    this is a helper function to validate the position we want to check"""
-    if i < 0 or j < 0:
-        return 1
-    try:
-        if grid[i][j] != 1:
-            return 1
-    except:
-        return 1
-    return 0
+# def checker(grid, i, j):
+#     """
+#     this is a helper function to validate the position we want to check"""
+#     if i < 0 or j < 0:
+#         return 1
+#     try:
+#         if grid[i][j] != 1:
+#             return 1
+#     except:
+#         return 1
+#     return 0
