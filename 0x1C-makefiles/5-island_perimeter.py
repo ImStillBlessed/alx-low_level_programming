@@ -3,6 +3,7 @@
 This module prints the perimeter of an island
 """
 
+
 def island_perimeter(grid):
     """
     this function calculates the perimeter if an island represented
@@ -35,6 +36,6 @@ def checker(grid, i, j):
     try:
         if grid[i][j] != 1:
             return 1
-    except:
+    except Exception:
         return 1
     return 0
