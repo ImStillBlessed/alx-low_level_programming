@@ -7,7 +7,7 @@
  * @value: the value to search for
  * Return: the index of @value ele -1.
  * 
- * Description: jumo step = sqrt(size)
+ * Description: jump step = sqrt(size)
 */
 
 int jump_search(int *array, size_t size, int value)
@@ -23,16 +23,13 @@ int jump_search(int *array, size_t size, int value)
 		printf("Value checked array[%d] = [%d]\n", current, array[current]);
 		current += step;
 	}
-	if (array[current] >= value)
+	prev = current - step;
+	printf("Value found between indexes [%d] and [%d]\n", prev, current);
+	for (; prev < size ; prev++)
 	{
-		prev = current - step;
-		printf("Value found between indexes [%d] and [%d]\n", prev, current);
-		for (; prev < size ; prev++)
-		{
-			printf("Value checked array[%d] = [%d]\n", prev, array[prev]);
-			if (array[prev] == value)
-				return (prev);
-		}
+		printf("Value checked array[%d] = [%d]\n", prev, array[prev]);
+		if (array[prev] == value)
+			return (prev);
 	}
 	return (-1);
 }
